@@ -5,6 +5,14 @@ Please click the document titled "An Algorithm for Balancing Sofas" for a comple
 
 ![Algorithm Run with 6 Anchor Points](media/n=6_ns.gif)
 
+<details>
+  <summary>Click me to expand another gif! (watch the bottom edge lift up)</summary>
+  
+  ![Algorithm Run with 18 Anchor Points and Smoothing](media/n=18_s.gif)
+  
+  
+</details>
+
 # Abstract
 
 Posed by Leo Moser in 1966, the moving sofa problem remains unsolved. In 1992, Joseph Gerver constructed a sofa which he conjectured to be the optimal solution to Moser's problem. However, Gerver provided no proof of this conjecture and to this date it remains unproven. Making use of Gerver's observations, we develop a variant of Phillip Gibbs' algorithm which provides computational evidence for Gerver's conjecture. We begin the paper by describing how we can approximate solutions to the moving sofa problem using the intersection of a finite number of polygons. Then, we show how we can increase the size of the approximation using Gerver's observations. Finally, we provide a description of the developed algorithm and show that the produced approximation seems to converge in shape and area to Gerver's construction. In the last two sections we briefly describe how to install and use our implementation of the algorithm *sofa_gui.py*. This project was done under the mentorship of Professor Dan Romik at the University of California, Davis.
