@@ -10,6 +10,8 @@ Please click the document titled "An Algorithm for Balancing Sofas" for a comple
   
   ![Algorithm Run with 18 Anchor Points and Smoothing](media/n=18_s.gif)
   
+  <sup><sub>With smoothing on, the algorithm still balances the unsmoothed polygon.</sub></sup> 
+  
   
 </details>
 
