@@ -93,7 +93,7 @@ As illustrated in the above figure, when we translate one of the hallways by a s
 
 ## Measuring Angles and Finding Delta
 
-Using the function *get\_features()*, details omitted for the sake of brevity, the program chooses an initial line, l<sub>1</sub>, on the boundary of S<sub>N</sub>. The line is defined by a set of two points (x<sub>1</sub>,y<sub>1</sub>),(x<sub>2</sub>,y<sub>2</sub>)$. The program then measures the angle of the line in the following manner:
+Using the function *get\_features()*, details omitted for the sake of brevity, the program chooses an initial line, l<sub>1</sub>, on the boundary of S<sub>N</sub>. The line is defined by a set of two points (x<sub>1</sub>,y<sub>1</sub>),(x<sub>2</sub>,y<sub>2</sub>). The program then measures the angle of the line in the following manner:
 
 <p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq16.svg"></p>
 
