@@ -117,7 +117,7 @@ The following two figures show the results of short runs (1000 iterations) of th
 
 <p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/gerver_S5.png" width="400"></p>
 
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/Gerver_S8.PNG" widht="400"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/Gerver_S8.PNG" width="400"></p>
 
 The next two figures show the results of slightly longer runs (10-15k iterations) on larger values of N. The shapes quickly become indistringuishable from Gerver's sofa and appear to converge in area.
 
