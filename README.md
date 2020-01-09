@@ -24,6 +24,10 @@ In 1992 came the work of Joseph Gerver who found a valid construction (as seen b
 
 However, Gerver's results were interesting for reasons other than an increase in area over Hammersley's sofa. Derived from considerations of local optimality, Gerver conjectured that his construction was indeed the solution to Moser's 1966 question. Despite the fact that Gerver's construction remains the largest discovered to date, his conjecture of global optimality remains unproven.
 
+# Discrete Approximations
+##Notation
+We begin by defining the sofa in terms of a rotating coordinate frame. Consider the L-shaped hallway that a candidate sofa moves through as given by
 
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq1.png" width="400"></p>
 
 
