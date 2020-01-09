@@ -38,4 +38,10 @@ Then we let S be a planar shape which satisfies
 
 <p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq3.png"></p>
 
-Where <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq4.png"> is a continuous path satisfying *x(0) = (0,0)* which defines the movement of the inner corner of L. As in Romik's 2016 paper, we call *x(t)* the *rotation path*.
+Where <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq4.png"> is a continuous path satisfying *x(0) = (0,0)* which defines the movement of the inner corner of L. As in Romik's 2016 paper, we call *x(t)* the *rotation path*. Only *x(t)* which produces connected shapes will be considered. All S defined in this way will be able to traverse the L-shaped hallway. For simplicity's sake, we can enforce the same restrictions on S by combining the horizontal hallway and the rotated vertical hallway to create one long horizontal hallway. Let
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq5.png"></p>
+Now define
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq6.png"></p>
+
+Consider then, for any given **x(t)** a sampling of **N+1** equidistant nodes. More specifically, call <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq7.png"> the set of anchor points which satisfy <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq8.png">. For the sake of simplifying notation, let <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq9.png">.
