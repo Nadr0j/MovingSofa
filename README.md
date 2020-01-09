@@ -14,6 +14,16 @@ Posed by Leo Moser in 1966, the moving sofa problem remains unsolved. In 1992, J
 In 1966, Leo Moser asked the question
 >"what is the shape of largest area in the plane that can be moved around a right-angled corner in a two-dimensional hallway of width 1?"
 
-Despite the problem's simple statement, it remains unsolved. Notable points of progess in the problem's history begin in 1968 with the work of John Hammersley who conjectured that his construction (*Figure 1*) of area 2/pi + pi/2 = 2.2074... was optimal. 
+Despite the problem's simple statement, it remains unsolved. Notable points of progess in the problem's history begin in 1968 with the work of John Hammersley who conjectured that his construction (as seen below) of area 2/pi + pi/2 = 2.2074... was optimal. 
 
-<img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/Hammersley.png" width="480">
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/Hammersley.png" width="400"></p>
+
+In 1992 came the work of Joseph Gerver who found a valid construction (as seen below) of area 2.2195... which was a modest improvement over Hammersley's construction.
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/Gerver.png" width="400"></p>
+
+However, Gerver's results were interesting for reasons other than an increase in area over Hammersley's sofa. Derived from considerations of local optimality, Gerver conjectured that his construction was indeed the solution to Moser's 1966 question. Despite the fact that Gerver's construction remains the largest discovered to date, his conjecture of global optimality remains unproven.
+
+
+
+
