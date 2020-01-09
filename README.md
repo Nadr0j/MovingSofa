@@ -16,4 +16,4 @@ In 1966, Leo Moser asked the question
 
 Despite the problem's simple statement, it remains unsolved. Notable points of progess in the problem's history begin in 1968 with the work of John Hammersley who conjectured that his construction (*Figure 1*) of area 2/pi + pi/2 = 2.2074... was optimal. 
 
-<img src="media/Hammersley" width="480">
+<img src=media/Hammersley width="480">
