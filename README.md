@@ -30,4 +30,12 @@ We begin by defining the sofa in terms of a rotating coordinate frame. Consider 
 
 <p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq1.png"></p>
 
+Let R <sub>t</sub> denote the rotation matrix
 
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq2.png"></p>
+
+Then we let S be a planar shape which satisfies
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq3.png"></p>
+
+Where <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq4.png"> is a continuous path satisfying *x(0) = (0,0)* which defines the movement of the inner corner of L. As in Romik's 2016 paper, we call *x(t)* the *rotation path*.
