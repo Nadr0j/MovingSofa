@@ -73,6 +73,20 @@ equal.
 
 The fundamental function of the algorithm is to use Gerver's balanced condition to continually grow the size of an unbalanced discrete sofa. We will now describe mathematically how the discrete sofa is balanced.
 
-*(Due to all of the inline equations in the proof, an image of the LaTeX rendering has been included. If you have any issues with viewing, I recommend opening the PDF file "An Algorithm for Balancing Sofas" available in this repository.)*
+*(Due to all of the inline equations in the below proof, an image of the LaTeX rendering has been included. If you have any issues with viewing, I recommend opening the PDF file "An Algorithm for Balancing Sofas" available in this repository.)*
 
 <p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq14.png"></p>
+In the next section, a suitable choice for δ becomes clear. 
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq15.png"></p>
+
+As illustrated in the above figure, when we translate one of the hallways by a small amount in the direction towards and perpendicular to the largest boundary line in the ’unbalanced pair’ the area we gain is larger than thearea lost.  The algorithm works by continually finding unbalanced pairs and then performing a balancing stepto increase the area of the polygon. As the algorithm continues, the polygon will become 'more balanced' in that the length difference between any two line pairs will begin to be very small.
+
+## Measuring Angles and Finding Delta
+
+Using the function *get\_features()*, details omitted for the sake of brevity, the program chooses an initial line, l<sub>1</sub>, on the boundary of S<sub>N</sub>. The line is defined by a set of two points (x<sub>1</sub>,y<sub>1</sub>),(x<sub>2</sub>,y<sub>2</sub>)$. The program then measures the angle of the line in the following manner:
+
+The benefit of measuring Θ in such a way is that it allows for easy identification of the corresponding k<sup>th</sup> hallway h<sub>k</sub> and makes a suitable choice for δ clear. 
+
+First, we recover the index for the k<sup>th</sup> hallway by
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq16.svg"></p>
