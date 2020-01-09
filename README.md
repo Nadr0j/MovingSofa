@@ -57,3 +57,22 @@ To illustrate this principle, consider the rotation path x(t) = 2\pi(cos(t)-1,si
 
 <p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq11.png"></p>
 
+Then, we calculated the difference between the area of S<sub>N</sub> and Hammerley's sofa then plotted the results. In addition, we created 'smoothed' versions of S<sub>N</sub>, denoted by S<sub>N<sup>*</sup></sub>, by doing piecewise linear interpolation between all anchor points to redefine the boundary. The following figures demonstrate the convergence of S<sub>N</sub> and S<sub>N<sup>*</sup></sub> to Hammersley's sofa. If we let λ(H) be the area of Hammersley's sofa, then figure 4 suggests the following
+
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq12.png"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq13.png"></p>
+
+## Balancing Polygons
+Gerver began his 1992 paper by giving the following definition
+
+>Definition: A polygon is *balanced* if, given any side, that side and every
+other side parallel to it lies on one of two lines, where the distance between the
+lines is 1 and the total length of the sides lying on each of the two lines is
+equal. 
+
+The fundamental function of the algorithm is to use Gerver's balanced condition to continually grow the size of an unbalanced discrete sofa. We will now describe mathematically how the discrete sofa is balanced.
+
+*(Due to all of the inline equations in the proof, an image of the LaTeX rendering has been included. If you have any issues with viewing, I recommend opening the PDF file "An Algorithm for Balancing Sofas" available in this repository.)*
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq14.png"></p>
