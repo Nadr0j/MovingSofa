@@ -45,3 +45,15 @@ Now define
 <p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq6.png"></p>
 
 Consider then, for any given **x(t)** a sampling of **N+1** equidistant nodes. More specifically, call <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq7.png"> the set of anchor points which satisfy <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq8.png">. For the sake of simplifying notation, let <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq9.png">.
+
+We call S<sub>N</sub> the discrete approximation of S given by 
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq10.png"></p>
+
+## Discrete Approximations
+One would hope that as N tends towards infinity, S<sub>N</sub> would tend towards S in area and shape for a fixed rotation path x(t). In absence of a proof, we will show computationally that this appears to be the case for Hammersley's sofa. Hammersley's sofa was chosen for computational simplicity, but the argument should extend to other sofa shapes. 
+
+To illustrate this principle, consider the rotation path x(t) = 2\pi(cos(t)-1,sin(t)) which gives Hammersley's sofa. For N = 2,3,...,256 we generated the corresponding set of anchor points and then built S<sub>N</sub>. This was done using the function *hallway_set()* which builds a list of elements where the i<sup>th</sup> element is given by X<sub>i</sub> + R<sub>i<sup>*</sup></sub>(L). Then, the set was passed to the  function *set\_to\_poly()* which intersected every element in the set and returned the resulting polygon. Both of these functions are found in *sofa\_gui.py*.
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq11.png"></p>
+
