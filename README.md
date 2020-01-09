@@ -110,7 +110,7 @@ The Shapely library provides much of functionality for handling polygons and, pe
 ## Pseudocode
 Let S<sub>N</sub> be a discrete sofa. Let hallway_set be the set of (X<sub>i</sub> + R<sub>i<sup>*</sup></sub>(L)) for i=0,1,...,N-1 where the 0<sup>th</sup> element is L<sub>strip</sub>. The following pseudocode describes a single iteration of the main function which performs a *balancing operation* which increases the size of S<sub>N</sub>. The pseudocode assumes that ε was chosen correctly. In the actual implementation of the algorithm, if ε is chosen to be too large the program throws away the results and tries a slightly smaller ε.
 
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq20.svg"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq20.png"></p>
 
 # Results
 The following two figures show the results of short runs (1000 iterations) of the algorithm for values of N=5 and N=8 respectively and both with smoothing.
