@@ -28,27 +28,27 @@ However, Gerver's results were interesting for reasons other than an increase in
 ## Notation
 We begin by defining the sofa in terms of a rotating coordinate frame. Consider the L-shaped hallway that a candidate sofa moves through as given by
 
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq1.png"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq1.svg"></p>
 
 Let R <sub>t</sub> denote the rotation matrix
 
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq2.png"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq2.svg"></p>
 
 Then we let S be a planar shape which satisfies
 
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq3.png"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq3.svg"></p>
 
 Where <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq4.png"> is a continuous path satisfying *x(0) = (0,0)* which defines the movement of the inner corner of L. As in Romik's 2016 paper, we call *x(t)* the *rotation path*. Only *x(t)* which produces connected shapes will be considered. All S defined in this way will be able to traverse the L-shaped hallway. For simplicity's sake, we can enforce the same restrictions on S by combining the horizontal hallway and the rotated vertical hallway to create one long horizontal hallway. Let
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq5.png"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq5.svg"></p>
 Now define
 
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq6.png"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq6.svg"></p>
 
-Consider then, for any given **x(t)** a sampling of **N+1** equidistant nodes. More specifically, call <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq7.png"> the set of anchor points which satisfy <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq8.png">. For the sake of simplifying notation, let <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq9.png">.
+Consider then, for any given **x(t)** a sampling of **N+1** equidistant nodes. More specifically, call <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq7.svg"> the set of anchor points which satisfy <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq8.svg">. For the sake of simplifying notation, let <img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq9.svg">.
 
 We call S<sub>N</sub> the discrete approximation of S given by 
 
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq10.png"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq10.svg"></p>
 
 ## Discrete Approximations
 One would hope that as N tends towards infinity, S<sub>N</sub> would tend towards S in area and shape for a fixed rotation path x(t). In absence of a proof, we will show computationally that this appears to be the case for Hammersley's sofa. Hammersley's sofa was chosen for computational simplicity, but the argument should extend to other sofa shapes. 
@@ -60,7 +60,7 @@ To illustrate this principle, consider the rotation path x(t) = 2\pi(cos(t)-1,si
 Then, we calculated the difference between the area of S<sub>N</sub> and Hammerley's sofa then plotted the results. In addition, we created 'smoothed' versions of S<sub>N</sub>, denoted by S<sub>N<sup>*</sup></sub>, by doing piecewise linear interpolation between all anchor points to redefine the boundary. The following figures demonstrate the convergence of S<sub>N</sub> and S<sub>N<sup>*</sup></sub> to Hammersley's sofa. If we let λ(H) be the area of Hammersley's sofa, then figure 4 suggests the following
 
 
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq12.png"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq12.svg"></p>
 <p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq13.png"></p>
 
 ## Balancing Polygons
@@ -85,10 +85,42 @@ As illustrated in the above figure, when we translate one of the hallways by a s
 
 Using the function *get\_features()*, details omitted for the sake of brevity, the program chooses an initial line, l<sub>1</sub>, on the boundary of S<sub>N</sub>. The line is defined by a set of two points (x<sub>1</sub>,y<sub>1</sub>),(x<sub>2</sub>,y<sub>2</sub>)$. The program then measures the angle of the line in the following manner:
 
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq16.png"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq16.svg"></p>
 
 The benefit of measuring Θ in such a way is that it allows for easy identification of the corresponding k<sup>th</sup> hallway h<sub>k</sub> and makes a suitable choice for δ clear. 
 
 First, we recover the index for the k<sup>th</sup> hallway by
 
 <p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq17.svg"></p>
+
+Before we define δ, we need to clarify how lines are chosen. The program chooses l<sub>1</sub> to be the line with the most negative x-coordinate. If the x-coordinates are equal, then the line with the largest y-coordinate is chosen as l<sub>1</sub>. Then, we define the sgn variable as such
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq18.svg"></p>
+
+Now we are ready to define δ.
+
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq19.svg"></p>
+
+
+# The Algorithm
+## Shapely, Discrete Sofas, and Hallway Sets
+The Shapely library provides much of functionality for handling polygons and, performing intersections and transformations throughout the program. Important for understanding the algorithm is understanding the relationship between the discrete sofa S<sub>N</sub> and the hallway_set variables. In short, the program makes its measurements on the sofa (such as line length, line angles etc) and then manipulates the hallway_set according to the previous measurements. Then, the program generates a new S<sub>N</sub> by intersecting the elements of the hallway_set.
+
+## Pseudocode
+Let S<sub>N</sub> be a discrete sofa. Let hallway_set be the set of (X<sub>i</sub> + R<sub>i<sup>*</sup></sub>(L)) for i=0,1,...,N-1 where the 0<sup>th</sup> element is L<sub>strip</sub>. The following pseudocode describes a single iteration of the main function which performs a *balancing operation* which increases the size of S<sub>N</sub>. The pseudocode assumes that ε was chosen correctly. In the actual implementation of the algorithm, if ε is chosen to be too large the program throws away the results and tries a slightly smaller ε.
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/eq20.svg"></p>
+
+# Results
+The following two figures show the results of short runs (1000 iterations) of the algorithm for values of N=5 and N=8 respectively and both with smoothing.
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/gerver_S5.png"></p>
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/Gerver_S8.png"></p>
+
+The next two figures show the results of slightly longer runs (10-15k iterations) on larger values of N. The shapes quickly become indistringuishable from Gerver's sofa and appear to converge in area.
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/N25I10000.png"></p>
+
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/N45I15000.png"></p>
