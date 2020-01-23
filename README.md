@@ -10,7 +10,7 @@ Please click the document titled "An Algorithm for Balancing Sofas" for a comple
   
   ![Algorithm Run with 18 Anchor Points and Smoothing](media/n=18_s.gif)
   
-   <sup><sub>With smoothing on, the algorithm still balances the unsmoothed polygon. This means that sometimes we will observe funny behavior with the displayed area, but the algorithm is still working properly.</sub></sup>
+   <sup><sub>With smoothing on, the algorithm still balances the unsmoothed polygon. This means that the displayed area value can actually decrease as the algorithm interpolates the rotation path with the inner corner of the unsmoothed hallway.</sub></sup>
   
   
 </details>
