@@ -22,7 +22,7 @@ As a continuation of my work under the mentorship of professor Dan Romik, but do
 <p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/115deg.png" width="800"></p>
 
 <p algin='center'> 75 degree hallway </p>
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/75-t1deg.png" width="800"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/75-t1.png" width="800"></p>
 
 # Abstract
 
