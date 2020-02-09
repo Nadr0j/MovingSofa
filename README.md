@@ -18,7 +18,7 @@ Please click the document titled "An Algorithm for Balancing Sofas" for a comple
 # Alternative Hallway Angle Results
 As a continuation of my work under the mentorship of professor Dan Romik, but done independently, I have sofa_nogui.py to produce hallways for alternate hallway angles. Sofa_gui.py gives a good visual demonstration of the algorithm's behavior for hallways with a 90 degree bend. Sofa_nogui.py can approximate the maximum sofa shape and area for any hallway with a bend of degree 1 to 120 (higher is a tighter turn). This version of the program also uses a more sophisticated termination condition. If the program is left to run it will only stop once it has found the best approximation for the given settings. Below are the results of a 75 degree hallway and a 115 degree hallway. N: denotes the number of anchor points placed with the area of the polygon to the left of that.
 
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/115deg.png" width="400"></p>
+<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/115deg.png" width="800"></p>
 
 # Abstract
 
