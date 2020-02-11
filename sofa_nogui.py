@@ -674,9 +674,6 @@ def plot_saver(hallway,hallway_set,theta,N,i,smooth=True):
 
     mp = round(len(hallway_set)/2)
 
-    hallway = rotate(hallway, 90-a, origin=(0,0))
-    hallway_set[0] = rotate(hallway_set[0], 90-a, origin=(0,0))
-
     minx, miny, maxx, maxy = hallway.bounds
 
 
@@ -715,9 +712,9 @@ print("In the location of sofa_balancer.py. You can also press...")
 print(" 'enter' at any time to terminate the program and save the result...")
 print("----")
 
-print("Please enter the following options:")
+print("Please set the following values:")
 
-a = int(input("Hallway bend degree (1 to 120): "))
+a = int(input("Hallway bend degree (10 to 120): "))
 N = int(input("Number of anchor points (5+): "))
 iterations = 50000
 
@@ -725,12 +722,13 @@ iterations = 50000
 #init vars
 hallway = hallway_intersector(N,a,a)
 hallway_set = hallway_list(N,a,a)
-#balance
-hallway, hallway_set, i = balance(a,N,iterations,hallway,hallway_set,smooth=True)
-hallway = set_to_poly(hallway_set)
-
-
-plot_saver(hallway,hallway_set,a,N,i,smooth=True)
+#balancei
+if a <= 120 and a >= 10 and N >= 5:
+    hallway, hallway_set, i = balance(a,N,iterations,hallway,hallway_set,smooth=True)
+    hallway = set_to_poly(hallway_set)
+    plot_saver(hallway,hallway_set,a,N,i,smooth=True)
+else:
+    print("Recieved invalid values. Exiting...")
 
 
 
