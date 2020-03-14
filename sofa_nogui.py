@@ -708,7 +708,7 @@ def plot_saver(hallway,hallway_set,theta,N,i,smooth=True):
 print("----")
 print("After the algorithm is unable to further interpolate the rotation path..")
 print("It will self-terminate and save a plot of the result..")
-print("In the location of sofa_balancer.py. You can also press...")
+print("In the location of sofa_nogui.py. You can also press...")
 print(" 'enter' at any time to terminate the program and save the result...")
 print("----")
 
