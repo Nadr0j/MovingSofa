@@ -16,15 +16,7 @@ Please click the document titled "An Algorithm for Balancing Sofas" for a comple
 </details>
 
 # (Update) Alternative Hallway Angle Results (sofa_nogui.py) 
-As a continuation of my work under the mentorship of professor Dan Romik, but done independently, I have developed <i>sofa_nogui.py</i> to produce hallways for alternate hallway angles. Sofa_gui.py gives a good visual demonstration of the algorithm's behavior for hallways with a 90 degree bend. Sofa_nogui.py can approximate the maximum sofa shape and area for any hallway with a bend of degree 1 to 120 (higher is a tighter turn). This version of the program also uses a more sophisticated termination condition. If the program is left to run it will only stop once it has found the best approximation for the given settings. Below are the results of a 75 degree hallway and a 115 degree hallway. N: denotes the number of anchor points (defined below) placed with the area of the polygon to the left of that. The program uses an unsmoothed version of a discrete approximation to interpolate the rotation path and then constructs a smoothed version accordingly. Because of this, the program will sometimes report that the area of the smoothed approximation is decreasing. This is expected behavior and leads to better approximations.
-
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/115deg.png" width="800"></p>
-<p> <center>115 degree hallway</center></p>
-
-<p align='center'><img src="https://github.com/Nadr0j/MovingSofa/blob/master/media/75-t1.png" width="800"></p>
-<p><center>75 degree hallway</center></p>
-
-
+As a continuation of my work under the mentorship of professor Dan Romik, but done independently, I have developed <i>sofa_brute.py</i> which uses a faster algorithm than sofa_gui.py to maximize the area of polygons satisfying the moving sofa problem. The program is written to be used entirely on the command line with a matplotlib plot displaying (or being saved to the local directory depending on user settings) after the algorithm has terminated. This program was used to conjecture global maximums for the <i>Modified Moving Sofa Problem</i> in a paper I wrote which you can find here.
 # Abstract
 
 Posed by Leo Moser in 1966, the moving sofa problem remains unsolved. In 1992, Joseph Gerver constructed a sofa which he conjectured to be the optimal solution to Moser's problem. However, Gerver provided no proof of this conjecture and to this date it remains unproven. Making use of Gerver's observations, we develop a variant of Phillip Gibbs' algorithm which provides computational evidence for Gerver's conjecture. We begin the paper by describing how we can approximate solutions to the moving sofa problem using the intersection of a finite number of polygons. Then, we show how we can increase the size of the approximation using Gerver's observations. Finally, we provide a description of the developed algorithm and show that the produced approximation seems to converge in shape and area to Gerver's construction. In the last two sections we briefly describe how to install and use our implementation of the algorithm *sofa_gui.py*. This project was done under the mentorship of Professor Dan Romik at the University of California, Davis.
