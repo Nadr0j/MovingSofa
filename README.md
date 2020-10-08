@@ -15,7 +15,7 @@ Please click the document titled "An Algorithm for Balancing Sofas" for a comple
   
 </details>
 
-# (Update) Alternative Hallway Angle Results (sofa_nogui.py) 
+# (Update) Explicit Constructions in the Modified Moving Sofa Problem (sofa_brute.py) 
 As a continuation of my work under the mentorship of professor Dan Romik, but done independently, I have developed <i>sofa_brute.py</i> which uses a faster algorithm than sofa_gui.py to maximize the area of polygons satisfying the moving sofa problem. The program is written to be used entirely on the command line with a matplotlib plot displaying (or being saved to the local directory depending on user settings) after the algorithm has terminated. This program was used to conjecture global maximums for the <i>Modified Moving Sofa Problem</i> in a paper I wrote which you can find here.
 # Abstract
 
